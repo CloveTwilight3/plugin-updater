@@ -1,0 +1,13 @@
+services:
+  plugin-updater:
+    # Use the locally built image or a published one.
+    image: clovetwilight3/plugin-updater:latest
+    volumes:
+      - ./plugins:/data/plugins
+    environment:
+      # Optionally override plugin URLs:
+      # GEYSER_URL: "https://new.url/for/geyser.jar"
+      # FLOODGATE_URL: "https://new.url/for/floodgate.jar"
+      # VIAVERSION_URL: "https://new.url/for/viaversion.jar"
+      # VIABACKWARDS_URL: "https://new.url/for/viabackwards.jar"
+    restart: "no"  # Adjust this if you need a specific restart policy.
